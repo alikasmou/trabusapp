@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCardRequest;
-use App\Http\Requests\UpdateCardRequest;
-use App\Models\Card;
+use App\Http\Requests\StoreChargeMachineRequest;
+use App\Http\Requests\UpdateChargeMachineRequest;
+use App\Models\ChargeMachine;
 
-class CardController extends Controller
+class ChargeMachineController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class CardController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCardRequest  $request
+     * @param  \App\Http\Requests\StoreChargeMachineRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCardRequest $request)
+    public function store(StoreChargeMachineRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class CardController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\ChargeMachine  $chargeMachine
      * @return \Illuminate\Http\Response
      */
-    public function show(Card $card)
+    public function show(ChargeMachine $chargeMachine)
     {
         //
     }
@@ -53,10 +53,10 @@ class CardController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\ChargeMachine  $chargeMachine
      * @return \Illuminate\Http\Response
      */
-    public function edit(Card $card)
+    public function edit(ChargeMachine $chargeMachine)
     {
         //
     }
@@ -64,11 +64,11 @@ class CardController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCardRequest  $request
-     * @param  \App\Models\Card  $card
+     * @param  \App\Http\Requests\UpdateChargeMachineRequest  $request
+     * @param  \App\Models\ChargeMachine  $chargeMachine
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCardRequest $request, Card $card)
+    public function update(UpdateChargeMachineRequest $request, ChargeMachine $chargeMachine)
     {
         //
     }
@@ -76,12 +76,11 @@ class CardController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\ChargeMachine  $chargeMachine
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Card $card)
+    public function destroy(ChargeMachine $chargeMachine)
     {
         //
     }
-
 }

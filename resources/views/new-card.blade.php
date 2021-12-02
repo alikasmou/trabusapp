@@ -11,11 +11,10 @@
 
 @section('main')
     <div class="
-    lg:col-span-3
+    lg:col-span-10
     lg:col-start-2
     col-span-10
     col-start-2
-    h-2/4
     flex
     justify-center
     items-center
@@ -30,7 +29,7 @@
     cursor-pointer
     overflow-hidden
     ">
-        <a href="{{ route("new-card") }}" class="
+        <h1 class="
             flex
             w-full
             h-full
@@ -39,67 +38,28 @@
             text-4xl
             text-white">
             {{ __('main.new-card') }}
-        </a>
+        </h1>
     </div>
     <div class="
-    lg:col-span-3
+    lg:col-span-10
+    lg:col-start-2
     col-span-10
     col-start-2
-    h-2/4
     flex
-    justify-center
-    items-center
-    bg-pink-600
-    hover:bg-pink-500
-    hover:border-white border-opacity-70
+    p-20
+    bg-blue-50
+    hover:bg-blue-50
+    hover:border-yellow-400
     border-4
+    border-yellow-300
+    border-opacity-70
     hover:border-opacity-90
     duration-500 ease-in-out
     shadow-2xl
     rounded-xl
     cursor-pointer
-    overflow-hidden
-    ">
-        <a href="" class="
-            flex
-            w-full
-            h-full
-            justify-center
-            items-center
-            text-4xl
-            text-white">
-            {{ __('main.charging-card') }}
-        </a>
-    </div>
-    <div class="
-    lg:col-span-3
-    col-span-10
-    col-start-2
-    h-2/4
-    flex
-    justify-center
-    items-center
-    bg-blue-600
-    hover:bg-blue-500
-    hover:border-white border-opacity-70
-    border-4
-    hover:border-opacity-90
-    duration-500 ease-in-out
-    shadow-2xl
-    rounded-xl
-    cursor-pointer
-    overflow-hidden
-    ">
-        <a href="" class="
-            flex
-            w-full
-            h-full
-            justify-center
-            items-center
-            text-4xl
-            text-white">
-            {{ __('main.refund-money') }}
-        </a>
+    overflow-hidden">
+    awkjhcklwjerer
     </div>
 @endsection
 

@@ -1,8 +1,10 @@
 <?php
 
 namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
+use App\Models\{
+    ChargeMachine
+};
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,8 +22,9 @@ class DatabaseSeeder extends Seeder
             LineSeeder::class,
             VehicleSeeder::class,
             StationSeeder::class,
-            
+
         ]);
-        // \App\Models\User::factory(10)->create();
+        ChargeMachine::factory(30)->create();
+        $this->call([StockSeeder::class]);
     }
 }
