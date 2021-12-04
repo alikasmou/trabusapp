@@ -30,7 +30,7 @@ class CardPriceSeeder extends Seeder
             ),
             array(
                 "card_type_id" => 3,
-                "price" => 350,
+                "price" => 175,
                 "expiration_duration" => $now->addMonth(),
                 "created_at" => now()
             ),

@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-
+use Carbon\Carbon;
 class UserFactory extends Factory
 {
     /**
@@ -14,12 +14,22 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        $name = $this->faker->name();
+        $username = Str::of($name)->camel();
+        $slug = Str::slug($username, '');
+        $phone = Str::remove('+', $this->faker->e164PhoneNumber());
         return [
-            'name' => $this->faker->name(),
+            'fullname' => $name,
+            'photo_url' => 'https://i.pravatar.cc/300',
+            'birthday' => Carbon::now()->subYears(rand(14,75)),
+            'identity_number'=> '99'.rand(111111111,999999999),
+            'phone'=> $phone,
+            'username' => $slug,
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
+            'remember_token' => null,
+            'client_type_id' => rand(1,3)
         ];
     }
 

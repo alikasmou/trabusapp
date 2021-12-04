@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\{
-    ChargeMachine
+    Card,
+    ChargeMachine,
+    User
 };
 
 class DatabaseSeeder extends Seeder
@@ -22,9 +24,11 @@ class DatabaseSeeder extends Seeder
             LineSeeder::class,
             VehicleSeeder::class,
             StationSeeder::class,
-
         ]);
         ChargeMachine::factory(30)->create();
         $this->call([StockSeeder::class]);
+        User::factory(1000)->create();
+        Card::factory(200)->create();
+        $this->call([PassingMachineSeeder::class]);
     }
 }

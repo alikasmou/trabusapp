@@ -2,7 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Station;
+use App\Models\{
+    Station,
+    Vehicle
+};
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
@@ -17,7 +20,7 @@ class StationSeeder extends Seeder
     {
         $station = array(
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Cevizlibağ"),
                 "order_in_line" => 1,
@@ -26,7 +29,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Merter"),
                 "order_in_line" => 2,
@@ -35,7 +38,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Zeytinburnu"),
                 "order_in_line" => 3,
@@ -44,7 +47,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("İncirli"),
                 "order_in_line" => 4,
@@ -53,7 +56,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Bahçelievler"),
                 "order_in_line" => 5,
@@ -62,7 +65,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Şirinevler"),
                 "order_in_line" => 6,
@@ -71,7 +74,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Yenibosna"),
                 "order_in_line" => 7,
@@ -80,7 +83,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Sefaköy"),
                 "order_in_line" => 8,
@@ -89,7 +92,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Beşyol"),
                 "order_in_line" => 9,
@@ -98,7 +101,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Florya"),
                 "order_in_line" => 10,
@@ -107,7 +110,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Cennet Mah"),
                 "order_in_line" => 11,
@@ -116,7 +119,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Küçükçekmece"),
                 "order_in_line" => 12,
@@ -125,7 +128,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("İBB Social Facilities"),
                 "order_in_line" => 13,
@@ -134,7 +137,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Şükrübey"),
                 "order_in_line" => 14,
@@ -143,7 +146,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Avcılar Campus"),
                 "order_in_line" => 15,
@@ -152,7 +155,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Mustafa Kemal Paşa"),
                 "order_in_line" => 16,
@@ -161,7 +164,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Haramidere Sanayi"),
                 "order_in_line" => 17,
@@ -170,7 +173,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Beylikdüzü Municipality"),
                 "order_in_line" => 18,
@@ -179,7 +182,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Cumhuriyet Mah"),
                 "order_in_line" => 19,
@@ -188,7 +191,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 1,
                 "name" => Str::lower("Beylikdüzü Last Station"),
                 "order_in_line" => 20,
@@ -197,7 +200,7 @@ class StationSeeder extends Seeder
                 "line_id" => 1
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("Gümüşsuyu Peron"),
                 "order_in_line" => 1,
@@ -206,7 +209,7 @@ class StationSeeder extends Seeder
                 "line_id" => 2
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("Taksim Tünel"),
                 "order_in_line" => 2,
@@ -215,7 +218,7 @@ class StationSeeder extends Seeder
                 "line_id" => 2
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("TEPEBAŞI"),
                 "order_in_line" => 3,
@@ -224,7 +227,7 @@ class StationSeeder extends Seeder
                 "line_id" => 2
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("Şişhane"),
                 "order_in_line" => 4,
@@ -233,7 +236,7 @@ class StationSeeder extends Seeder
                 "line_id" => 2
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("UNKAPANI"),
                 "order_in_line" => 5,
@@ -242,7 +245,7 @@ class StationSeeder extends Seeder
                 "line_id" => 2
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("Fatih"),
                 "order_in_line" => 6,
@@ -251,7 +254,7 @@ class StationSeeder extends Seeder
                 "line_id" => 2
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("YUSUFPAŞA"),
                 "order_in_line" => 7,
@@ -260,7 +263,7 @@ class StationSeeder extends Seeder
                 "line_id" => 2
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("FINDIKZADE"),
                 "order_in_line" => 8,
@@ -269,7 +272,7 @@ class StationSeeder extends Seeder
                 "line_id" => 2
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("MİLLET CADDESİ"),
                 "order_in_line" => 9,
@@ -278,7 +281,7 @@ class StationSeeder extends Seeder
                 "line_id" => 2
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("GÜZELYURT"),
                 "order_in_line" => 10,
@@ -287,7 +290,7 @@ class StationSeeder extends Seeder
                 "line_id" => 2
             ),
             array(
-                "stationable_type" => Vehicle::class,
+                "stationable_type" => "App\\Models\\Vehicle",
                 "stationable_id" => 2,
                 "name" => Str::lower("BİZİMKENT"),
                 "order_in_line" => 11,
