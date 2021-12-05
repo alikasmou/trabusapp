@@ -1,0 +1,6 @@
+Model Card to connect the database an deal with attributes --> table --> fields ("names") computed appended attributes
+
+
+Controller CardController functions methods
+use to make instant from each object 
+table cards

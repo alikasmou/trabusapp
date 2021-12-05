@@ -3,7 +3,7 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -26,4 +26,8 @@ Route::post('/passing',function(){
 
 Route::get('/test',function(){
     return App\Models\Station::where('stationable_type','App\Models\Vehicle')->where('stationable_id',2)->get()->pluck('id');
+});
+Route::get('qr-code', function ()
+{
+  return QrCode::generate('QR Code Generator for Laravel!');
 });
