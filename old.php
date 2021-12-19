@@ -123,6 +123,8 @@ class CardController extends Controller
             if($card_owner->balance >= $price->amount){
                 // dd($card_owner->balance , $price->amount);
 
+
+
                 $transaction->card_id = $card_owner->id;
                 $transaction->amount = $price->amount;
                 $transaction->start_station_id = $station->id;

@@ -21,7 +21,7 @@ class CreatePricesTable extends Migration
             $table->tinyInteger('stops')->nullable();
             $table->tinyInteger('transfers')->nullable();
             $table->double('amount');
-            $table->index(['vehicle_id','card_type_id','client_type_id']);
+            $table->index(['card_type_id','amount']);
             $table->timestamps();
         });
     }

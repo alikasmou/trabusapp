@@ -16,7 +16,6 @@ class CreateVehiclesTable extends Migration
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            
             $table->enum('type',['metrobus','bus']);
             $table->timestamps();
         });

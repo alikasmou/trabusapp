@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CardTypeIdCards extends Migration
+class StatusTransaction extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CardTypeIdCards extends Migration
      */
     public function up()
     {
-        Schema::table('cards', function (Blueprint $table) {
-            $table->foreignId('card_type_id')->constrained();
+        Schema::table('transactions', function (Blueprint $table) {
+            $table->boolean('is_refunded')->default(false);
+
         });
     }
 
@@ -25,8 +26,8 @@ class CardTypeIdCards extends Migration
      */
     public function down()
     {
-        Schema::table('cards', function (Blueprint $table) {
-            $table->dropColumn('card_type_id');
+        Schema::table('transactions', function (Blueprint $table) {
+            $table->dropColumn('is_refunded');
         });
     }
 }

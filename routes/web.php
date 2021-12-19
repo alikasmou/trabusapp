@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\{
+    UserController,
+    CardController
+};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +23,7 @@ Route::get('/', function () {
 Route::get('/new', function(){
     return view('new-card');
 })->name('new-card');
+
+Route::post('my-card',[CardController::class,'show'])->name('my-card');
+
+// Route::get('user/card/{owner}',[UserController::class,'card'])->name('mycard');

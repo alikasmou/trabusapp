@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TransactionSeeder extends Seeder
 {
@@ -13,6 +15,6 @@ class TransactionSeeder extends Seeder
      */
     public function run()
     {
-        //
+
     }
 }

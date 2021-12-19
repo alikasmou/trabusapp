@@ -82,7 +82,10 @@ class UserController extends Controller
     {
         //
     }
-
+    public function card(){
+        $card = User::where('name');
+        return request()->owner;
+    }
     public function login(Request $request){
         $card_number = $request->card_number;
         $user = User::with('cards')->where('cards.number', $card_number)->first();

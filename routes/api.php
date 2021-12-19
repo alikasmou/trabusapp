@@ -4,6 +4,15 @@ use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use App\Models\{
+    User,
+    Card
+};
+use App\Http\Controllers\{
+    CardController
+};
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,16 +27,10 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('/tokens/create', [UserController::class,'login']);
 
-Route::post('/passing',function(){
-    // $request->
-});
+Route::post('metrobus-pass',[CardController::class,'metrobus']);
+Route::post('bus-pass',[CardController::class,'bus']);
+Route::post('refund',[CardController::class,'refund']);
+Route::post('charging',[CardController::class,'charge']);
 
-Route::get('/test',function(){
-    return App\Models\Station::where('stationable_type','App\Models\Vehicle')->where('stationable_id',2)->get()->pluck('id');
-});
-Route::get('qr-code', function ()
-{
-  return QrCode::generate('QR Code Generator for Laravel!');
-});
+

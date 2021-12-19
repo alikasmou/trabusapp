@@ -26,9 +26,10 @@ class DatabaseSeeder extends Seeder
             StationSeeder::class,
         ]);
         ChargeMachine::factory(30)->create();
-        $this->call([StockSeeder::class]);
-        User::factory(1000)->create();
+        $this->call([StockSeeder::class,UserSeeder::class]);
+        User::factory(5)->create();
         Card::factory(200)->create();
         $this->call([PassingMachineSeeder::class]);
+        $this->call([CardSeeder::class,PriceSeeder::class,TransactionSeeder::class]);
     }
 }

@@ -19,13 +19,13 @@ class VehicleSeeder extends Seeder
                 "name" => "34C",
                 "type" => "metrobus",
                 "created_at" => now(),
-                "line_id" => 1
+                "line_id" => 1 //cevizlibag
             ),
             array(
                 "name" => "145T",
                 "type" => "bus",
                 "created_at" => now(),
-                "line_id" => 2
+                "line_id" => 2 //taksim
             ),
         );
         Vehicle::insert($vehicles);

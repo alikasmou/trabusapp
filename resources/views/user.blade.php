@@ -9,8 +9,12 @@
     </h1>
 @endsection
 @section('main')
-<div id="qr-reader" width="800px" height="800px"></div>
-<div id="qr-reader-results"></div>
+<div class="">
+    <form action="{{url()}}" method="post">
+        @csrf
+        <input type="text" name="name">
+    </form>
+</div>
 
 @endsection
 
